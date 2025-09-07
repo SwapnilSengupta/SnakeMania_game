@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../static_assets/bg.jpg");
+    min-height:100vh;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: start; /*control sitting on main axis that is vertical in this case*/
+    align-items: center; /*control sitting on cross axis that is horizontal in this case*/
+}
+.board{
+    background: linear-gradient(lab(86.69% -58.29 20.53),rgb(72, 200, 123));
+    width: 90vmin;
+    height:92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(35,1fr);
+    grid-template-columns: repeat(35,1fr);
+    margin-top: 0.9vh;
+    margin-bottom: 0.9vh;
+}
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+.head{
+    
+
+    transform: scale(1,1);
+    background:linear-gradient(red, yellow);
+    border: 2px solid purple;
+    
+}
+
+
+.food{
+    
+    background:linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 7.8px;
+}
+#score{
+    position: absolute;
+    top: 55px;
+    right: 120px;
+    background: rgb(253, 253, 88);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Lucida Console", monospace;
+    border: 2px solid black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#highscore{
+    position: absolute;
+    top: 145px;
+    right: 55px;
+    background: rgb(253, 253, 88);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Lucida Console", monospace;
+    border: 2px solid black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.navbar{
+    background: linear-gradient(90deg, #087d22, #2c7744);
+    display: flex;
+    justify-content: space-around; /*control sitting on main axis that is horizontal in this case*/
+    align-items: center; /*control sitting on cross axis that is vertical in this case*/
+    width: 100%;
+    height:5.8vh;
+    /* margin-bottom: 2vh; */
+}
+#Logo{
+    display: inline;
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+#game-name {
+    display: inline;
+    font-family: "Comic Sans MS", "Fredoka One", "Baloo Bhai 2", cursive; 
+    font-size: 2rem;
+    color: #ffeb3b; /* bright yellow pops nicely */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* cartoon boldness */
+    letter-spacing: 2px;
+}
+.navleft{
+    display: flex;
+    justify-content: space-around; /*control sitting on main axis that is horizontal in this case*/
+    align-items: center; /*control sitting on cross axis that is vertical in this case*/
+    width: 20%;
+}
+
+#mode-toggle {
+    background: linear-gradient(90deg, #ffeb3b, #ff9800); /* yellow → orange */
+    border: 3px solid #2c7744;  /* matches navbar green */
+    border-radius: 20px;
+    color: #242424;
+    font-family: "Baloo Bhai 2", "Comic Sans MS", cursive;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    box-shadow: 3px 3px 0px #1a4d2e; /* playful cartoon shadow */
+}
+
+#mode-toggle:hover {
+    transform: scale(1.07);
+    box-shadow: 4px 4px 0px #0f301c;
+}
+
+#dev-credit {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: #f0e6eb;
+    font-family: "Press Start 2P", monospace; /* retro arcade font */
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 2px solid #222;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 2px 2px 0px #111;
+}
+.setting{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+
+
+
+
+
+/* Cartoon Mode Settings */
+.setting {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    background: linear-gradient(135deg, #ffeb3b, #ff9800);
+    padding: 10px 15px;
+    border: 2px solid #2c7744;
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    font-family: "Baloo Bhai 2", "Comic Sans MS", cursive;
+    color: #242424;
+}
+
+.setting label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+}
+
+.setting select {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #2c7744;
+    background: linear-gradient(90deg, #ffeb3b, #ff9800);
+    color: #242424;
+    cursor: pointer;
+    font-family: "Baloo Bhai 2", "Comic Sans MS", cursive;
+}
+.setting select:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* Cartoon Mode option styles */
+#lv1 {
+  background: #fff8b3;
+  color: #ff66b2;
+  font-family: "Comic Sans MS", cursive;
+}
+
+#lv2 {
+  background: #c2f0c2;
+  color: #008800;
+  font-family: "Comic Sans MS", cursive;
+}
+
+#lv3 {
+  background: #ffd6cc;
+  color: #ff3300;
+  font-family: "Comic Sans MS", cursive;
+}
+#lv4 {
+  background: #e6ccff;
+  color: #6600cc;
+  font-family: "Comic Sans MS", cursive;
+}
+#lv5 {
+  background: #ffe680;
+  color: #cc0066;
+  font-family: "Comic Sans MS", cursive;
+}

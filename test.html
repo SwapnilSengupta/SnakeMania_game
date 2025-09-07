@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Auto Placement Demo</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      grid-auto-rows: 60px;
+      gap: 5px;
+      background: #eee;
+      padding: 10px;
+    }
+    .item {
+      background: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border: 2px solid navy;
+    }
+    /* Make item 5 span rows */
+    .item5 {
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      background: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div style="margin-bottom:15px; background:lightblue;">Box 1</div>
+<div style="margin-top:30px; background:lightgreen;">Box 2</div>
+</body>
+</html>
